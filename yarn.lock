@@ -91,6 +91,13 @@ has-flag@^3.0.0:
   resolved "http://registry.m.jd.com/has-flag/download/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
 
+iconv-lite@^0.5.0:
+  version "0.5.0"
+  resolved "http://registry.m.jd.com/iconv-lite/download/iconv-lite-0.5.0.tgz#59cdde0a2a297cc2aeb0c6445a195ee89f127550"
+  integrity sha1-Wc3eCiopfMKusMZEWhle6J8SdVA=
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3"
+
 is-buffer@^2.0.2:
   version "2.0.3"
   resolved "http://registry.m.jd.com/is-buffer/download/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
@@ -144,6 +151,11 @@ restore-cursor@^2.0.0:
   dependencies:
     onetime "^2.0.0"
     signal-exit "^3.0.2"
+
+"safer-buffer@>= 2.1.2 < 3":
+  version "2.1.2"
+  resolved "http://registry.m.jd.com/safer-buffer/download/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+  integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
 
 signal-exit@^3.0.2:
   version "3.0.2"

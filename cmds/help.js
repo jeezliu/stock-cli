@@ -1,18 +1,19 @@
 const menus = {
   main: `
-    outside [command] <options>
-    today .............. show weather for today
-    forecast ........... show 10-day weather forecast
+    stock [command] <options>
+    get .............. get stock price
+    star ........... star stock
+    unstar ........... unstar stock
     version ............ show package version
     help ............... show help menu for a command`,
 
-  today: `
-    outside today <options>
-    --location, -l ..... the location to use`,
+  get: `
+    stock get <options>
+    --top, -t ..... show stock price realtime`,
 
-  forecast: `
-    outside forecast <options>
-    --location, -l ..... the location to use`,
+  star: `
+    stock star <options>
+    `,
 }
 
 module.exports = (args) => {

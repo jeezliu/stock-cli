@@ -32,8 +32,8 @@ module.exports = () => {
       require('./cmds/version')(args)
       break
     
-    case 'fetch':
-      require('./cmds/fetch')(args)
+    case 'get':
+      require('./cmds/get')(args)
       break
     
     default:
