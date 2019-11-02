@@ -12,8 +12,12 @@ const menus = {
     --top, -t ..... show stock price realtime`,
 
   star: `
-    stock star <options>
-    `,
+    stock star [stockcode] <options>
+    --list, -l .... show starred list
+    --top, -t ..... show starred stock price realtime`,
+
+  unstar: `
+    stock unstar [stockcode] .... unstar stock`
 }
 
 module.exports = (args) => {

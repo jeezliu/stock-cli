@@ -2,16 +2,8 @@ const minimist = require('minimist')
 const error = require('./error')
 
 module.exports = () => {
-
-  console.log('0=======');
-  console.log(process.argv);
-  console.log('0=======');
-
   const args = minimist(process.argv.slice(2))
-
-  console.log('=======');
-  console.log(args);
-  console.log('=======');
+  // console.log(args)
 
   let cmd = args._[0] || 'help'
 
@@ -36,6 +28,14 @@ module.exports = () => {
       require('./cmds/get')(args)
       break
     
+    case 'star':
+      require('./cmds/star')(args)
+      break
+
+    case 'unstar':
+      require('./cmds/unstar')(args)
+      break
+
     default:
       error(`"${cmd}" is not a valid command!`, true)
       break
