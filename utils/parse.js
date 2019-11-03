@@ -1,4 +1,6 @@
 module.exports = (code, info) => {
+  if(!info) return ['', code, '', '']
+  
   const arr = info.split(',')
   if(code.startsWith('sh') || code.startsWith('sz')) {
     const name = arr[0]

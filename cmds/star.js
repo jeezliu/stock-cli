@@ -8,13 +8,14 @@ const tabulate = require('../utils/tabulate')
 
 module.exports =  async (args) => {
 
-  const list = args.list || args.l
-  const top = args.top || args.t
   const codes = args._.slice(1)
-  console.log(args)
+  const top = args.top || args.t
+  const list = args.list || args.l
+  // console.log(args)
   
   const config = new Configstore('stock-cli', {star: []})
-  // const starList = config.get('star')
+  const starList = config.get('star')
+
   if(list) {
     if(starList.length === 0) {
       console.log('暂无关注')
@@ -23,15 +24,18 @@ module.exports =  async (args) => {
     starList.forEach(item => {
       console.log(tabulate([item.name, item.code]))
     })
+    return
   }
-  if(top) {
-    const starCodes = starList.map(item => item.code)
-    getStock(Object.assign({}, args, {'_' : ['get'].concat(starCodes)}))
-  }
+
   if(codes.length > 0) {
-    const spinner = ora().start()
     try {
+      const exists = starList.filter(item => codes.some(code => code === item.code))
+      exists.forEach(item => {
+        console.log(`已有关注：${item.name}-${item.code}`)
+      })
+      // 检查新增关注
       const newAdds = codes.filter(code => !starList.some(item => item.code === code))
+      const spinner = ora().start()
       const stocks = await fetch(newAdds)
       spinner.stop()
       const stockAdds = stocks.map((item, index) => {
@@ -50,5 +54,11 @@ module.exports =  async (args) => {
       }
       console.error(err)
     }
+    return
+  }
+
+  if(top || codes.length === 0) {
+    const starCodes = starList.map(item => item.code)
+    getStock(Object.assign({}, args, {'_' : ['get'].concat(starCodes)}))
   }
 }

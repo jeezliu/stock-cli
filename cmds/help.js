@@ -8,16 +8,16 @@ const menus = {
     help ............... show help menu for a command`,
 
   get: `
-    stock get <options>
+    stock get [stockcode1 stockcode2 ...] <options>
     --top, -t ..... show stock price realtime`,
 
   star: `
-    stock star [stockcode] <options>
+    stock star [stockcode1 stockcode2 ...] <options>
     --list, -l .... show starred list
     --top, -t ..... show starred stock price realtime`,
 
   unstar: `
-    stock unstar [stockcode] .... unstar stock`
+    stock unstar [stockcode1 stockcode2 ...] .... unstar stock`
 }
 
 module.exports = (args) => {
