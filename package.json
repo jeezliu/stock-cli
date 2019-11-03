@@ -1,6 +1,6 @@
 {
-  "name": "stock-cli",
-  "version": "1.0.0",
+  "name": "stocki",
+  "version": "1.0.1",
   "main": "index.js",
   "author": "liu",
   "license": "MIT",
@@ -15,5 +15,9 @@
     "minimist": "^1.2.0",
     "ora": "^3.4.0",
     "word-width": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeezliu/stock-cli"
   }
 }
