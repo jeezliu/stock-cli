@@ -4,7 +4,7 @@ const chalk = require('chalk')
 const fetch = require('../utils/fetch')
 const parse = require('../utils/parse')
 const tabulate = require('../utils/tabulate')
-const clear = require('../utils/clear')
+// const clear = require('../utils/clear')
 
 const getStock = async (args) => {
   const spinner = ora().start()
@@ -16,7 +16,7 @@ const getStock = async (args) => {
     const stocks = await fetch(codes)
 
     spinner.stop()
-    clear()
+    // clear()
     console.log(tabulate(['名称', '代码', '最新', '涨幅']))
     stocks.forEach((item, index) => {
       const stockInfo = parse(codes[index], item)

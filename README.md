@@ -2,6 +2,8 @@
 
 Stocki 命令行程序查看股票价格。关注股票后，stock star 命令即可打印出关注股票的最新价格。
 
+![usage](http://storage.360buyimg.com/externals/1.svg)
+
 #### 安装
 ```bash
 npm i -g stocki
