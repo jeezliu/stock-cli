@@ -17,6 +17,14 @@ const getStock = async (args) => {
 
     spinner.stop()
     // clear()
+    var date = new Date();
+    Y = date.getFullYear() + '-';
+    M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+    D = date.getDate() < 10 ? '0'+(date.getDate())+'T' : date.getDate()+'T';
+    h = date.getHours() < 10 ? '0'+(date.getHours())+':' : date.getHours()+':';
+    m = date.getMinutes() < 10 ? '0'+(date.getMinutes())+':' : date.getMinutes()+':';
+    s = date.getSeconds() < 10 ? '0'+(date.getSeconds()) : date.getSeconds();
+    console.log(Y+M+D+h+m+s);
     console.log(tabulate(['名称', '代码', '最新', '涨幅']))
     stocks.forEach((item, index) => {
       const stockInfo = parse(codes[index], item)
