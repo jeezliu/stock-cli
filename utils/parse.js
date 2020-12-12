@@ -7,7 +7,8 @@ module.exports = (code, info) => {
     const last = arr[2]
     const now = arr[3]
     const change = ((now - last) / last) * 100
-    return [name, code, now, change.toFixed(2)]
+    const number = arr[8]/1000000
+    return [name, code, now, change.toFixed(2), number.toFixed(2)+'万手']
   }
   if(code.startsWith('hk')) {
     const name = arr[1]
