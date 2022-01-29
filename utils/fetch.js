@@ -6,6 +6,7 @@ module.exports = async (codes = []) => {
   const results = await axios({
     method: 'get',
     url: 'http://hq.sinajs.cn/list=' + codes.join(','),
+    headers: {Referer: 'https://www.sina.com.cn'},
     responseType: 'stream'
   })
   
