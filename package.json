@@ -1,23 +1,56 @@
 {
-  "name": "stocki",
-  "version": "1.0.2",
-  "main": "index.js",
-  "author": "liu",
-  "license": "MIT",
+  "_from": "stocki",
+  "_id": "stocki@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-JleN4EeEfdbie0jms02NR2NKUF0b1xYV/5gjp2qQcNYDCi4+zS9U/pjgSHEOfC8jR8ac1zMbZH5N2UheVl9RFQ==",
+  "_location": "/stocki",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "stocki",
+    "name": "stocki",
+    "escapedName": "stocki",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/stocki/-/stocki-1.0.2.tgz",
+  "_shasum": "2920a57ef4276695e1b03dc16badfe358fd3d6fe",
+  "_spec": "stocki",
+  "_where": "/usr/lib/node_modules/stocki/bin",
+  "author": {
+    "name": "liu"
+  },
   "bin": {
     "stock": "bin/stock"
   },
+  "bugs": {
+    "url": "https://github.com/jeezliu/stock-cli/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "axios": "^0.19.0",
     "chalk": "^2.4.2",
     "configstore": "^5.0.0",
     "iconv-lite": "^0.5.0",
-    "minimist": "^1.2.3",
+    "minimist": "^1.2.0",
     "ora": "^3.4.0",
     "word-width": "^1.0.1"
   },
+  "deprecated": false,
+  "description": "Stocki 命令行程序查看股票价格。关注股票后，stock star 命令即可打印出关注股票的最新价格。",
+  "homepage": "https://github.com/jeezliu/stock-cli#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "stocki",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeezliu/stock-cli"
-  }
+    "url": "git+https://github.com/jeezliu/stock-cli.git"
+  },
+  "version": "1.0.2"
 }
